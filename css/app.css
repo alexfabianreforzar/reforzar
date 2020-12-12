@@ -1,0 +1,145 @@
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+}
+
+h1 {
+    font-size: calc(2vw + 2vh);
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2::after {
+    position: absolute;
+    border: 1px solid #333;
+    top: 4rem;
+    content: "";
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 50%;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+h4, h5, h6 {
+    font-weight: 500;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+footer {
+    background-color: #F1F1F1;
+}
+
+@media (max-width: 1200px) {
+    footer span {
+        display: none;
+    }
+}
+
+#backToTopBtn {
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    z-index: 200;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background-color: #171717;
+    opacity: 0.9;
+}
+
+/* Navbar */
+
+.logo {
+    height: 3rem;
+}
+
+.bg-dark {
+    background-color: #171717 !important;
+    opacity: 0.9;
+}
+
+/* Home */
+
+.caption-1 {
+    top: 35%;
+}
+
+.caption-2 {
+    top: 40%;
+}
+
+.caption-3 {
+    top: 47%;
+    right: 40%;
+}
+
+@media (max-width: 576px) {
+    .caption-3 h1 {
+        font-size: 1.2rem;
+    }
+    .caption-3 {
+        top: 35%;
+    }
+}
+
+/* About */
+
+#about {
+    text-align: justify;
+}
+
+#about li {
+    list-style: none;
+}
+
+.rounded-about {
+    border-radius: 3rem;
+}
+
+/* Gallery */
+
+.gallery-photo {
+    cursor: pointer;
+}
+
+.gallery-photo:hover {
+    opacity: 0.5;
+}
+
+/* Modal */
+
+#galleryModal .modal-dialog {
+    max-width: none;
+}
+
+#galleryModal .modal-header {
+    background-color: #F1F1F1;
+}
+
+#galleryModal .modal-content {
+    background-color: #000;
+}
+
+#carouselGallery img {
+  max-height: calc(100vh - 45px);
+  object-fit: contain;
+}
+
+#carouselGallery .carousel-item.active, .carousel-item-right, .carousel-item-left {
+    display: flex;
+}
