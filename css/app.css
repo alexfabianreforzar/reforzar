@@ -39,16 +39,6 @@ h5 {
     font-size: 1rem;
 }
 
-footer {
-    background-color: #F1F1F1;
-}
-
-@media (max-width: 1200px) {
-    footer span {
-        display: none;
-    }
-}
-
 #backToTopBtn {
     position: fixed;
     right: 3rem;
@@ -99,7 +89,7 @@ footer {
 
 /* About */
 
-#about {
+#about p {
     text-align: justify;
 }
 
@@ -111,6 +101,24 @@ footer {
     border-radius: 3rem;
 }
 
+/* Products */
+
+.card-group-products {
+    border-top: none;
+}
+
+.card-product-right {
+    border-right: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.card-product-left {
+    border-left: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
 /* Gallery */
 
 .gallery-photo {
@@ -119,6 +127,16 @@ footer {
 
 .gallery-photo:hover {
     opacity: 0.5;
+}
+
+/* Footer */
+
+footer {
+    background-color: #F1F1F1;
+}
+
+.about-footer {
+    text-align: justify;
 }
 
 /* Modal */
@@ -133,6 +151,7 @@ footer {
 
 #galleryModal .modal-content {
     background-color: #000;
+    border: 1px solid #000;
 }
 
 #carouselGallery img {
@@ -140,6 +159,8 @@ footer {
   object-fit: contain;
 }
 
-#carouselGallery .carousel-item.active, .carousel-item-right, .carousel-item-left {
+#carouselGallery .carousel-item.active,
+#carouselGallery .carousel-item-right,
+#carouselGallery .carousel-item-left {
     display: flex;
 }

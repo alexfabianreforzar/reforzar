@@ -4,26 +4,39 @@ function backToTop() {
     });
 }
 
+function getFilename(path) {
+    return path.split('/').pop().split('.')[0];
+}
+
+function getCarouselIndicator(src, index) {
+    return '<li id="' + getFilename(src) + 'Indicator" class="carousel-indicator" data-target="#carouselGallery" data-slide-to="' + index + '"></li>';
+}
+
+function getCarouselItem(src, alt) {
+    return '<div id="' + getFilename(src) + 'Item" class="carousel-item"><img class="d-block w-100" src="' + src + '" alt="' + alt + '"/></div>';
+}
+
 function openGallery(elem) {
-    $('#carouselGallery .carousel-indicators').empty();
-    $('#carouselGallery .carousel-inner').empty();
-    $('#gallery img').each(function(index) {
-        let active = '';
-        if ($(elem).find('img').attr('src') === $(this).attr('src')) {
-            active = 'active';
-        }
-        $('#carouselGallery .carousel-indicators').append('<li data-target="#carouselGallery" data-slide-to="' + index + '" class="' + active + '"></li>');
-        $('#carouselGallery .carousel-inner').append('<div class="carousel-item ' + active + '"><img class="d-block w-100" src="' + $(this).attr('src') + '" alt="..."/></div>');
-    });
+    $('#carouselGallery .carousel-indicator').removeClass('active');
+    $('#carouselGallery .carousel-item').removeClass('active');
+    $('#' + getFilename($(elem).attr('src')) + 'Indicator').addClass('active');
+    $('#' + getFilename($(elem).attr('src')) + 'Item').addClass('active');
     
     $('#galleryModal').modal('show');
 }
 
-$(document).ready(function() {
+function initGallery() {
     $('#gallery .gallery-photo').click(function() {
-        openGallery($(this));
+        openGallery($(this).children());
     });
-    
+
+    $('#gallery img').each(function(index) {
+        $('#carouselGallery .carousel-indicators').append(getCarouselIndicator($(this).attr('src'), index));
+        $('#carouselGallery .carousel-inner').append(getCarouselItem($(this).attr('src'), $(this).attr('alt')));
+    });
+}
+
+$(document).ready(function() {
     $(window).scroll(function() {
        if ($(this).scrollTop() > 300) {
           $('#backToTopBtn').fadeIn();
@@ -43,4 +56,6 @@ $(document).ready(function() {
            scrollTop: $($(this).attr('href')).offset().top - 100
         });
     });
+
+    initGallery();
 });
