@@ -24,6 +24,12 @@ function getCarouselVideo(src) {
     return getCarouselItem(src).replace('CAROUSEL_ITEM', '<video controls><source src="' + src + '" type="video/mp4">Video no soportado.</video>');
 }
 
+function pauseVideos() {
+    $('#carouselGallery video').each(function() {
+        $(this)[0].pause();
+    });
+}
+
 function openGallery(elem) {
     $('#carouselGallery .carousel-indicator').removeClass('active');
     $('#carouselGallery .carousel-item').removeClass('active');
@@ -59,16 +65,20 @@ function initGallery() {
         $('#carouselGallery .carousel-inner').append(getCarouselVideo(src));
     });
 
-    $('#carouselGallery').on('slide.bs.carousel', function () {
-        $('#carouselGallery video').each(function() {
-            $(this)[0].pause();
-        });
-
-        $('#carouselGallery .carousel-indicators').fadeIn();
+    $('#carouselGallery').on('slide.bs.carousel', function() {
+        pauseVideos();
     });
 
     $('#carouselGallery video').on('playing', function() {
         $('#carouselGallery .carousel-indicators').fadeOut();
+    });
+
+    $('#carouselGallery video').on('pause', function() {
+        $('#carouselGallery .carousel-indicators').fadeIn();
+    });
+
+    $('#galleryModal').on('hide.bs.modal', function() {
+        pauseVideos();
     });
 }
 
