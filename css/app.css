@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: calc(2vw + 2vh);
+    font-size: 3rem;
     font-weight: 800;
 }
 
@@ -44,22 +44,38 @@ h5 {
     right: 2.5rem;
     bottom: 2.5rem;
     z-index: 200;
-    cursor: pointer;
+}
+
+.btn-llamar {
+    position: fixed;
+    left: 2.5rem;
+    bottom: 6rem;
+    z-index: 200;
+    padding: 0.7rem;
+    background-color: #FFF;
+    border: 1px solid;
+    border-radius: 50%;
+}
+
+.btn-llamar:hover {
+    background-color: #DDD;
 }
 
 .btn-mensaje {
     position: fixed;
     left: 2.5rem;
-    bottom: 1.95rem;
+    bottom: 2.3rem;
     z-index: 200;
+    background-color: #DDD;
+    border-radius: 50%;
 }
 
 .btn-mensaje img {
-    height: 3.4rem;
+    height: 2.8rem;
 }
 
 .btn-mensaje img:hover {
-    opacity: 0.8;
+    opacity: 0.5;
 }
 
 .btn-secondary {
@@ -80,12 +96,20 @@ h5 {
 
 /* Home */
 
+#home img {
+    object-fit: cover;
+}
+
+.img-home-2 {
+    object-position: 20% 50%;
+}
+
 .caption-1 {
     top: 35%;
 }
 
 .caption-2 {
-    top: 40%;
+    top: 35%;
 }
 
 .caption-3 {
@@ -93,12 +117,10 @@ h5 {
     right: 40%;
 }
 
-@media (max-width: 576px) {
-    .caption-3 h1 {
-        font-size: 1.2rem;
-    }
+@media (max-width: 992px) {
     .caption-3 {
-        top: 35%;
+        top: 30%;
+        right: 10%;
     }
 }
 
