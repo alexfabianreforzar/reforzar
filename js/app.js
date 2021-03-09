@@ -24,9 +24,10 @@ function getCarouselVideo(src) {
     return getCarouselItem(src).replace('CAROUSEL_ITEM', '<video controls><source src="' + src + '" type="video/mp4">Video no soportado.</video>');
 }
 
-function pauseVideos() {
+function stopVideos() {
     $('#carouselGallery video').each(function() {
         $(this)[0].pause();
+        $(this)[0].currentTime = 0;
     });
 }
 
@@ -50,6 +51,7 @@ function initGallery() {
     });
 
     $('#gallery img').each(function() {
+        $(this).parent().append('<div class="overlay"><i class="fa fa-search-plus icon-zoom-in"></i></div>');
         $('#carouselGallery .carousel-indicators').append(getCarouselIndicator($(this).attr('src')));
         $('#carouselGallery .carousel-inner').append(getCarouselImg($(this).attr('src'), $(this).attr('alt')));
     });
@@ -66,29 +68,21 @@ function initGallery() {
     });
 
     $('#carouselGallery').on('slide.bs.carousel', function() {
-        pauseVideos();
-    });
-
-    $('#carouselGallery video').on('playing', function() {
-        $('#carouselGallery .carousel-indicators').fadeOut();
-    });
-
-    $('#carouselGallery video').on('pause', function() {
-        $('#carouselGallery .carousel-indicators').fadeIn();
+        stopVideos();
     });
 
     $('#galleryModal').on('hide.bs.modal', function() {
-        pauseVideos();
+        stopVideos();
     });
 }
 
 $(document).ready(function() {
     $(window).scroll(function() {
-       if ($(this).scrollTop() > 300) {
-          $('#backToTopBtn').fadeIn();
-       } else {
-          $('#backToTopBtn').fadeOut();
-       }
+        if ($(this).scrollTop() > 300) {
+            $('#backToTopBtn').fadeIn();
+        } else {
+            $('#backToTopBtn').fadeOut();
+        }
     });
 
     $('body').scrollspy({
@@ -99,7 +93,7 @@ $(document).ready(function() {
     $('.nav-link').click(function(e) {
         e.preventDefault();
         $('html, body').animate({
-           scrollTop: $($(this).attr('href')).offset().top - 100
+            scrollTop: $($(this).attr('href')).offset().top - 100
         });
     });
 

@@ -27,15 +27,15 @@ h2::after {
     width: 5rem;
 }
 
-h3 {
-    font-weight: 600;
-}
-
-h4, h5, h6 {
+h3, h4, h5, h6 {
     font-weight: 500;
 }
 
-h5 {
+h3 {
+    font-size: 1.5rem;
+}
+
+h4, h5, h6 {
     font-size: 1rem;
 }
 
@@ -74,13 +74,19 @@ h5 {
     height: 2.8rem;
 }
 
-.btn-mensaje img:hover {
+.btn-mensaje:hover img {
     opacity: 0.5;
 }
 
 .btn-secondary {
     background-color: #171717;
     opacity: 0.9;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    top: 50%;
+    bottom: 50%;
+    width: 10%;
 }
 
 /* Navbar */
@@ -159,16 +165,39 @@ h5 {
 /* Gallery */
 
 .gallery-photo {
+    position: relative;
     cursor: pointer;
 }
 
-.gallery-photo:hover {
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    background-color: #000;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease 0s;
+}
+
+.gallery-photo:hover .overlay {
     opacity: 0.5;
+}
+
+.icon-zoom-in {
+    position: absolute;
+    color: #FFF;
+    font-size: 3rem;
+    top: 50%;
+    left: 50%;
+    height: 20%;
+    transform: translate(-50%, -50%);
 }
 
 /* Contact */
 
-.contact-emails {
+.emails-contact {
     word-wrap: break-word;
 }
 
@@ -200,13 +229,13 @@ footer {
 
 #carouselGallery img,
 #carouselGallery video {
-  height: calc(100vh - 45px);
-  max-height: calc(100vh - 45px);
-  object-fit: contain;
+    height: calc(100vh - 80px);
+    max-height: calc(100vh - 80px);
+    object-fit: contain;
 }
 
 #carouselGallery .carousel-indicators {
-    margin-bottom: 2.5rem;
+    margin-bottom: 0.5rem;
 }
 
 #carouselGallery .carousel-item.active,
