@@ -16,7 +16,7 @@ h2 {
     font-weight: 700;
 }
 
-h2::after {
+section h2::after {
     position: absolute;
     border: 1px solid #333;
     top: 4rem;
@@ -87,6 +87,10 @@ h4, h5, h6 {
     top: 50%;
     bottom: 50%;
     width: 10%;
+}
+
+.mt-10 {
+    margin-top: 10rem;
 }
 
 /* Navbar */
@@ -219,6 +223,8 @@ footer {
 
 #galleryModal .modal-header {
     background-color: #F1F1F1;
+    border-bottom: 1px solid #000;
+    border-radius: 0;
 }
 
 #galleryModal .modal-content {
