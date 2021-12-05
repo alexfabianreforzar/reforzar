@@ -1,3 +1,5 @@
+var captionFade = null;
+
 function backToTop() {
     $('html, body').animate({
         scrollTop: 0
@@ -16,8 +18,12 @@ function getCarouselItem(src) {
     return '<div id="' + getFilename(src) + 'Item" class="carousel-item justify-content-center">CAROUSEL_ITEM</div>';
 }
 
-function getCarouselImg(src, alt) {
-    return getCarouselItem(src).replace('CAROUSEL_ITEM', '<img class="d-block w-100" src="' + src + '" alt="' + alt + '"/>');
+function getCarouselImg(src, alt, title) {
+    return getCarouselItem(src).replace('CAROUSEL_ITEM', '<img class="d-block w-100" src="' + src + '" alt="' + alt + '"/>' + getCarouselCaption(title));
+}
+
+function getCarouselCaption(title) {
+    return title !== undefined ? '<div class="carousel-caption"><p class="image-text">' + title + '</p></div>' : '';
 }
 
 function getCarouselVideo(src) {
@@ -31,6 +37,18 @@ function stopVideos() {
     });
 }
 
+function setCaptionFade(elem) {
+    let caption = $(elem).find('.carousel-caption');
+
+    if (caption.length > 0) {
+        clearTimeout(captionFade);
+        captionFade = setTimeout(function() {
+            caption.fadeOut();
+        }, 5000);
+        caption.show();
+    }
+}
+
 function openGallery(elem) {
     $('#carouselGallery .carousel-indicator').removeClass('active');
     $('#carouselGallery .carousel-item').removeClass('active');
@@ -39,8 +57,12 @@ function openGallery(elem) {
         elem = $('#gallery img')[0];
     }
 
-    $('#' + getFilename($(elem).attr('src')) + 'Indicator').addClass('active');
-    $('#' + getFilename($(elem).attr('src')) + 'Item').addClass('active');
+    let filename = getFilename($(elem).attr('src'));
+
+    $('#' + filename + 'Indicator').addClass('active');
+    $('#' + filename + 'Item').addClass('active');
+
+    setCaptionFade($('#' + filename + 'Item'));
 
     $('#galleryModal').modal('show');
 }
@@ -53,7 +75,7 @@ function initGallery() {
     $('#gallery img').each(function() {
         $(this).parent().append('<div class="overlay"><i class="fa fa-search-plus icon-zoom-in"></i></div>');
         $('#carouselGallery .carousel-indicators').append(getCarouselIndicator($(this).attr('src')));
-        $('#carouselGallery .carousel-inner').append(getCarouselImg($(this).attr('src'), $(this).attr('alt')));
+        $('#carouselGallery .carousel-inner').append(getCarouselImg($(this).attr('src'), $(this).attr('alt'), $(this).parent().attr('title')));
     });
 
     let videos = [
@@ -67,8 +89,9 @@ function initGallery() {
         $('#carouselGallery .carousel-inner').append(getCarouselVideo(src));
     });
 
-    $('#carouselGallery').on('slide.bs.carousel', function() {
+    $('#carouselGallery').on('slide.bs.carousel', function(e) {
         stopVideos();
+        setCaptionFade(e.relatedTarget);
     });
 
     $('#galleryModal').on('hide.bs.modal', function() {
@@ -93,7 +116,7 @@ $(document).ready(function() {
     $('.nav-link').click(function(e) {
         e.preventDefault();
         $('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top - 100
+            scrollTop: $($(this).attr('href')).offset().top - 75
         });
     });
 

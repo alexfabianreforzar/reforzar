@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Reforzar</title>
+    <title>Reforzar | Refuerzos para Cajones y Bines</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="chapas, refuerzos, cajones, bines, frutas, verduras, zona sur, lanus, esquineros, chapitas cajoneras, hojalata">
@@ -69,22 +69,22 @@
                         </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselFade" role="button" data-slide="prev">
+                <a class="carousel-control-prev" onclick="$('#carouselFade').carousel('prev');" role="button">
                     <span class="fa fa-chevron-left fa-2x" aria-hidden="true"></span>
                     <span class="sr-only">Anterior</span>
                 </a>
-                <a class="carousel-control-next" href="#carouselFade" role="button" data-slide="next">
+                <a class="carousel-control-next" onclick="$('#carouselFade').carousel('next');" role="button">
                     <span class="fa fa-chevron-right fa-2x" aria-hidden="true"></span>
                     <span class="sr-only">Siguiente</span>
                 </a>
             </div>
         </section>
 
-        <div class="container">
-            <section id="about" class="mt-5">
+        <section id="about" class="container-fluid pb-4 pt-4">
+            <div class="container">
                 <div class="row">
                     <div class="col">
-                        <div class="text-center mb-5">
+                        <div class="text-center mb-4">
                             <h2 class="position-relative d-inline-block">Nosotros</h2>
                         </div>
                     </div>
@@ -94,7 +94,7 @@
                         <img class="rounded-about d-block w-100" src="img/about.jpg" alt="Acerca de Reforzar">
                     </div>
                     <div class="col-md-6 col-12 mt-3">
-                        <h3>Reforzar</h3>
+                        <h3><strong>Reforzar</strong></h3>
                         <p>Somos una empresa dedicada a la fabricación de refuerzos y esquineros para cajones de frutas, verduras y bines.</p>
                         <p>Línea liviana en hojalata utilizada en los cajones frutihortícolas:</p>
                         <ul>
@@ -106,15 +106,17 @@
                             <li><i class="fa fa-check"></i> Esquineros Galvanizados para Bines</li>
                             <li><i class="fa fa-check"></i> Refuerzos Planos para Bines</li>
                         </ul>
-                        <p>Nuestros productos son conocidos y comercializados en todo el país.</p>
+                        <p>Todos nuestros productos son de excelente calidad.</p>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="products" class="mt-5">
+        <section id="products" class="container-fluid pb-4 pt-4 parallax">
+            <div class="container">
                 <div class="row">
                     <div class="col">
-                        <div class="text-center mb-5">
+                        <div class="text-center mb-4">
                             <h2 class="position-relative d-inline-block">Productos</h2>
                         </div>
                     </div>
@@ -132,7 +134,7 @@
                         <div class="card-group-products">
                             <div class="row no-gutters">
                                 <div class="col-6">
-                                    <div class="card">
+                                    <div class="card shadow">
                                         <img class="card-img-top" src="img/products/product1.jpg" alt="Medidas de refuerzos de hojalata para cajones">
                                         <ul class="list-group list-group-flush text-center">
                                             <li class="list-group-item">11x58</li>
@@ -142,7 +144,7 @@
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div class="card">
+                                    <div class="card shadow">
                                         <img class="card-img-top" src="img/products/product2.jpg" alt="Medidas de refuerzos de hojalata para cajones">
                                         <ul class="list-group list-group-flush text-center">
                                             <li class="list-group-item">13x75 - 13x75</li>
@@ -153,9 +155,10 @@
                                 </div>
                             </div>
                         </div>
+                        <div><p class="mb-0 mt-2"><small>* Medidas en milímetros.</small></p></div>
                     </div>
                     <div class="col-md-6 col-12 order-4">
-                        <div class="card card-group-products">
+                        <div class="card card-group-products shadow">
                             <div class="row no-gutters">
                                 <div class="col-6">
                                     <div class="card card-product-left">
@@ -174,14 +177,17 @@
                                 <li class="list-group-item">Plana: 6x20</li>
                             </ul>
                         </div>
+                        <div><p class="mb-0 mt-2"><small>* Medidas en centímetros. Consultar por esquinero de 45x5x5.</small></p></div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="gallery" class="mt-5">
+        <section id="gallery" class="container-fluid pb-4 pt-4">
+            <div class="container">
                 <div class="row">
                     <div class="col">
-                        <div class="text-center mb-5">
+                        <div class="text-center mb-4">
                             <h2 class="position-relative d-inline-block">Galería</h2>
                         </div>
                     </div>
@@ -297,16 +303,32 @@
                     </div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col text-center">
-                        <button type="button" class="btn btn-primary" onclick="openGallery(null);">Ver galería completa</button>
+                    <div class="col">
+                        <div class="text-center">
+                            <button type="button" class="btn btn-primary" onclick="openGallery(null);">Ver galería completa</button>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="contact" class="mt-5">
+        <section id="sectionSlogan" class="container-fluid pb-5-custom pt-5-custom parallax">
+            <div class="container">
                 <div class="row">
                     <div class="col">
-                        <div class="text-center mb-5">
+                        <div class="text-center">
+                            <h3 class="m-0">Nuestros productos son conocidos y comercializados en todo el país</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container-fluid pb-4 pt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="text-center mb-4">
                             <h2 class="position-relative d-inline-block">Contacto</h2>
                         </div>
                     </div>
@@ -335,22 +357,22 @@
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="mt-5 pb-4 pt-5">
+    <footer class="pb-3 pt-4">
         <div class="container">
             <div class="row">
                 <div class="col-md-7 col-12">
-                    <img class="logo mb-3" src="img/logo-transparent.png" alt="Reforzar">
+                    <img class="logo mb-3" src="img/logo.png" alt="Reforzar">
                     <p class="about-footer">Somos una empresa dedicada a la fabricación de refuerzos y esquineros para cajones de frutas, verduras y bines.</p>
                 </div>
                 <div class="col-md-5 col-12">
-                    <h3 class="mb-3">Información</h3>
+                    <h3 class="mb-3"><strong>Información</strong></h3>
                     <p>Para comunicarse con nosotros:</p>
                     <p><strong>Tel: </strong>(011) 4262-1414<br><strong>Cel: </strong>11 5333-1887</p>
-                    <p>
+                    <p class="emails-footer">
                         <strong>Emails:</strong>
                         <br>
                         <a href="mailto:alejandromacchione@gmail.com;" title="Enviar email">alejandromacchione@gmail.com</a>
@@ -382,11 +404,11 @@
                             <div id="carouselGallery" class="carousel slide" data-ride="carousel" data-interval="false">
                                 <ol class="carousel-indicators fixed-bottom p-0"></ol>
                                 <div class="carousel-inner d-flex"></div>
-                                <a class="carousel-control-prev" href="#carouselGallery" role="button" data-slide="prev">
+                                <a class="carousel-control-prev" onclick="$('#carouselGallery').carousel('prev');" role="button">
                                     <span class="fa fa-chevron-left fa-2x" aria-hidden="true"></span>
                                     <span class="sr-only">Anterior</span>
                                 </a>
-                                <a class="carousel-control-next" href="#carouselGallery" role="button" data-slide="next">
+                                <a class="carousel-control-next" onclick="$('#carouselGallery').carousel('next');" role="button">
                                     <span class="fa fa-chevron-right fa-2x" aria-hidden="true"></span>
                                     <span class="sr-only">Siguiente</span>
                                 </a>
