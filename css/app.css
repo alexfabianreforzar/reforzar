@@ -46,10 +46,6 @@ h4, h5, h6 {
     z-index: 200;
 }
 
-#sectionSlogan {
-    background-image: url("../img/bg-slogan.jpg");
-}
-
 .btn-llamar {
     position: fixed;
     left: 2.5rem;
@@ -97,6 +93,23 @@ h4, h5, h6 {
     margin-top: 10rem;
 }
 
+.parallax {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax h2,
+.parallax h3,
+.parallax h4,
+.parallax p {
+    color: #FFF;
+}
+
+.parallax h2::after {
+    border: 1px solid #FFF;
+}
+
 .pt-5-custom {
     padding-top: 5rem;
 }
@@ -138,24 +151,6 @@ h4, h5, h6 {
 .caption-3 {
     top: 47%;
     right: 40%;
-}
-
-.parallax {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.parallax h2,
-.parallax h3,
-.parallax h4,
-.parallax p {
-    color: #FFF;
-}
-
-.parallax h2::after {
-    border: 1px solid #FFF;
 }
 
 @media (max-width: 992px) {
@@ -247,6 +242,12 @@ h4, h5, h6 {
     transform: translate(-50%, -50%);
 }
 
+/* Slogan */
+
+#slogan {
+    background-image: url("../img/bg-slogan.jpg");
+}
+
 /* Contact */
 
 .emails-contact {
@@ -265,7 +266,7 @@ footer {
 }
 
 .emails-footer a {
-    color: #3F9CFF;
+    color: #65AFFF;
 }
 
 /* Modal */
