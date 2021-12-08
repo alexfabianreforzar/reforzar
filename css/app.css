@@ -136,6 +136,16 @@ h4, h5, h6 {
     object-fit: cover;
 }
 
+#home h1 {
+    position: relative;
+    animation: caption-animated 1s 1;
+}
+
+@keyframes caption-animated {
+    0% { top: 100%; }
+    100% { top: 0; }
+}
+
 .img-home-2 {
     object-position: 20% 50%;
 }
