@@ -214,6 +214,24 @@ h4, h5, h6 {
     border-bottom-right-radius: 0;
 }
 
+.img-product-right {
+    border-top-left-radius: 0;
+}
+
+.img-product-left {
+    border-top-right-radius: 0;
+}
+
+.no-border-radius-right {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.no-border-radius-left {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
 /* Gallery */
 
 #gallery {
@@ -223,6 +241,7 @@ h4, h5, h6 {
 .gallery-photo {
     position: relative;
     cursor: pointer;
+    border-radius: 0.25rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
