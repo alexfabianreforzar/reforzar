@@ -1,2 +1,2 @@
 # Reforzar
-Refuerzos para cajones de frutas, verduras y bines.
+Refuerzos para Cajones y Bines
