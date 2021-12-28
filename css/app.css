@@ -17,13 +17,10 @@ h2 {
 }
 
 section h2::after {
-    position: absolute;
+    display: flex;
     border: 1px solid #333;
-    top: 4rem;
     content: "";
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+    margin: 1rem auto 0 auto;
     width: 5rem;
 }
 
@@ -37,6 +34,18 @@ h3 {
 
 h4, h5, h6 {
     font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button:focus {
+    box-shadow: none !important;
 }
 
 #backToTopBtn {
@@ -87,6 +96,7 @@ h4, h5, h6 {
     top: 50%;
     bottom: 50%;
     width: 10%;
+    cursor: pointer;
 }
 
 .mt-10 {
@@ -118,6 +128,22 @@ h4, h5, h6 {
     padding-bottom: 5rem;
 }
 
+.bi-2x {
+    font-size: 2rem;
+    line-height: 0.75rem;
+}
+
+.bi-8x {
+    font-size: 8rem;
+    line-height: 0.75rem;
+}
+
+.bi-custom {
+    font-size: 1.3rem;
+    line-height: 0.75rem;
+    vertical-align: -0.125rem;
+}
+
 /* Navbar */
 
 .logo {
@@ -125,8 +151,8 @@ h4, h5, h6 {
 }
 
 .bg-dark {
-    border-bottom: 1px solid;
     background-color: #171717 !important;
+    padding-bottom: 0.6rem;
     opacity: 0.9;
 }
 
@@ -260,12 +286,13 @@ h4, h5, h6 {
 }
 
 .icon-zoom-in {
+    display: flex;
     position: absolute;
     color: #FFF;
-    font-size: 3rem;
+    font-size: 2rem;
     top: 50%;
     left: 50%;
-    height: 20%;
+    height: 15%;
     transform: translate(-50%, -50%);
 }
 
@@ -296,11 +323,11 @@ footer {
     color: #65AFFF;
 }
 
-/* Modal */
-
-#galleryModal .modal-dialog {
-    max-width: none;
+.emails-footer a:hover {
+    color: #4C92DD;
 }
+
+/* Modal */
 
 #galleryModal .modal-header {
     background-color: #E9E9E9;
@@ -326,8 +353,8 @@ footer {
 }
 
 #carouselGallery .carousel-item.active,
-#carouselGallery .carousel-item-right,
-#carouselGallery .carousel-item-left {
+#carouselGallery .carousel-item-start,
+#carouselGallery .carousel-item-end {
     display: flex;
 }
 

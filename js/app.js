@@ -11,7 +11,8 @@ function getFilename(path) {
 }
 
 function getCarouselIndicator(src) {
-    return '<li id="' + getFilename(src) + 'Indicator" class="carousel-indicator" data-target="#carouselGallery" data-slide-to="' + $('#carouselGallery .carousel-indicator').length + '"></li>';
+    let index = $('#carouselGallery .carousel-indicator').length;
+    return '<button type="button" id="' + getFilename(src) + 'Indicator" class="carousel-indicator" data-bs-target="#carouselGallery" data-bs-slide-to="' + index + '" aria-label="Slide ' + index + '"></button>';
 }
 
 function getCarouselItem(src) {
@@ -27,7 +28,7 @@ function getCarouselCaption(title) {
 }
 
 function getCarouselVideo(src) {
-    return getCarouselItem(src).replace('CAROUSEL_ITEM', '<video controls><source src="' + src + '" type="video/mp4">Video no soportado.</video>');
+    return getCarouselItem(src).replace('CAROUSEL_ITEM', '<video class="d-block" controls><source src="' + src + '" type="video/mp4">Video no soportado.</video>');
 }
 
 function stopVideos() {
@@ -73,7 +74,7 @@ function initGallery() {
     });
 
     $('#gallery img').each(function() {
-        $(this).parent().append('<div class="overlay"><i class="fa fa-search-plus icon-zoom-in"></i></div>');
+        $(this).parent().append('<div class="overlay"><i class="bi bi-zoom-in icon-zoom-in"></i></div>');
         $('#carouselGallery .carousel-indicators').append(getCarouselIndicator($(this).attr('src')));
         $('#carouselGallery .carousel-inner').append(getCarouselImg($(this).attr('src'), $(this).attr('alt'), $(this).parent().attr('title')));
     });

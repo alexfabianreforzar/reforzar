@@ -21,20 +21,20 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
     <link rel="stylesheet" href="css/app.css">
 </head>
 
 <body>
     <header class="fixed-top">
-        <nav id="navbarMenu" class="navbar navbar-dark bg-dark navbar-expand-md">
+        <nav id="navbarMenu" class="navbar navbar-expand-md navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="/"><img class="logo" src="img/logo.png" alt="Reforzar"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul id="listMenu" class="navbar-nav ml-auto">
+                    <ul id="listMenu" class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">Nosotros</a></li>
                         <li class="nav-item"><a class="nav-link" href="#products">Productos</a></li>
@@ -48,7 +48,7 @@
 
     <main class="container-fluid p-0">
         <section id="home" class="shadow">
-            <div id="carouselFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval="8000" data-pause="false">
+            <div id="carouselFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="8000" data-bs-pause="false">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img class="d-block w-100 vh-100" src="img/bg-home1.jpg" alt="Bines reforzados con esquineros galvanizados">
@@ -69,13 +69,13 @@
                         </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev" onclick="$('#carouselFade').carousel('prev');" role="button">
-                    <span class="fa fa-chevron-left fa-2x" aria-hidden="true"></span>
-                    <span class="sr-only">Anterior</span>
+                <a class="carousel-control-prev" data-bs-target="#carouselFade" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
                 </a>
-                <a class="carousel-control-next" onclick="$('#carouselFade').carousel('next');" role="button">
-                    <span class="fa fa-chevron-right fa-2x" aria-hidden="true"></span>
-                    <span class="sr-only">Siguiente</span>
+                <a class="carousel-control-next" data-bs-target="#carouselFade" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
                 </a>
             </div>
         </section>
@@ -98,13 +98,13 @@
                         <p>Somos una empresa dedicada a la fabricación de refuerzos y esquineros para cajones de frutas, verduras y bines.</p>
                         <p>Línea liviana en hojalata utilizada en los cajones frutihortícolas:</p>
                         <ul>
-                            <li><i class="fa fa-check"></i> Refuerzos para Cajones de Frutas y Verduras</li>
-                            <li><i class="fa fa-check"></i> Chapitas Cajoneras</li>
+                            <li><i class="bi bi-check bi-custom"></i> Refuerzos para Cajones de Frutas y Verduras</li>
+                            <li><i class="bi bi-check bi-custom"></i> Chapitas Cajoneras</li>
                         </ul>
                         <p>Línea pesada-galvanizada para bines:</p>
                         <ul>
-                            <li><i class="fa fa-check"></i> Esquineros Galvanizados para Bines</li>
-                            <li><i class="fa fa-check"></i> Refuerzos Planos para Bines</li>
+                            <li><i class="bi bi-check bi-custom"></i> Esquineros Galvanizados para Bines</li>
+                            <li><i class="bi bi-check bi-custom"></i> Refuerzos Planos para Bines</li>
                         </ul>
                         <p>Todos nuestros productos son de excelente calidad.</p>
                     </div>
@@ -132,7 +132,7 @@
                     </div>
                     <div class="col-md-6 col-12 order-md-3 order-2">
                         <div class="card-group-products shadow">
-                            <div class="row no-gutters">
+                            <div class="row g-0">
                                 <div class="col-6">
                                     <div class="card no-border-radius-right">
                                         <img class="card-img-top img-product-left" src="img/products/product1.jpg" alt="Medidas de refuerzos de hojalata para cajones">
@@ -159,7 +159,7 @@
                     </div>
                     <div class="col-md-6 col-12 order-4">
                         <div class="card card-group-products shadow">
-                            <div class="row no-gutters">
+                            <div class="row g-0">
                                 <div class="col-6">
                                     <div class="card card-product-left no-border-radius-right">
                                         <img class="card-img-top img-product-left" src="img/products/product3.jpg" alt="Medidas de esquineros galvanizados para bines">
@@ -336,13 +336,13 @@
                 <div class="row">
                     <div class="col-md-4 col-12 mt-3">
                         <div class="text-center">
-                            <i class="fa fa-phone-alt fa-2x"></i>
+                            <i class="bi bi-telephone-fill bi-2x"></i>
                             <p class="mt-2 mb-3"><strong>Tel: </strong>(011) 4262-1414<br><strong>Cel: </strong>11 5333-1887</p>
                         </div>
                     </div>
                     <div class="col-md-4 col-12 mt-3">
                         <div class="text-center emails-contact">
-                            <i class="fa fa-envelope fa-2x"></i>
+                            <i class="bi bi-envelope-fill bi-2x"></i>
                             <p class="mt-2 mb-3">
                                 <a href="mailto:alejandromacchione@gmail.com;" title="Enviar email">alejandromacchione@gmail.com</a>
                                 <br>
@@ -352,7 +352,7 @@
                     </div>
                     <div class="col-md-4 col-12 mt-3">
                         <div class="text-center">
-                            <i class="fa fa-map-marker-alt fa-2x"></i>
+                            <i class="bi bi-geo-alt-fill bi-2x"></i>
                             <p class="mt-2 mb-3">La Rioja 2940, Lanús Oeste (1824),<br>Buenos Aires</p>
                         </div>
                     </div>
@@ -385,32 +385,30 @@
         </div>
     </footer>
 
-    <a class="btn-llamar" href="tel:1142621414" title="Llamar"><i class="fa fa-phone-alt fa-lg"></i></a>
-    <a class="btn-mensaje" href="https://wa.me/5491153331887" target="_blank" title="Enviar mensaje" rel="noopener noreferrer"><img src="img/whatsapp-logo.png" alt="WhatsApp"></a>
-    <a id="backToTopBtn" class="btn btn-secondary" onclick="backToTop();" title="Volver al inicio" style="display: none;"><i class="fa fa-chevron-up"></i></a>
+    <a class="btn-llamar" href="tel:1142621414" title="Llamar"><i class="bi bi-telephone-fill bi-custom"></i></a>
+    <a class="btn-mensaje" href="https://wa.me/5491153331887" target="_blank" rel="noopener noreferrer" title="Enviar mensaje"><img src="img/whatsapp-logo.png" alt="WhatsApp"></a>
+    <a id="backToTopBtn" class="btn btn-secondary" onclick="backToTop();" title="Volver al inicio" style="display: none;"><i class="bi bi-chevron-up"></i></a>
 
-    <div class="modal fade p-0" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel" aria-hidden="true">
-        <div class="modal-dialog m-0 w-100 h-100" role="document">
-            <div class="modal-content w-100 h-100">
+    <div class="modal fade p-0" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen m-0">
+            <div class="modal-content">
                 <div class="modal-header p-2">
                     <h5 class="modal-title" id="galleryModalLabel">Galería</h5>
-                    <button type="button" class="close pl-2 pb-2" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-0">
                     <div class="row align-items-start m-0">
                         <div class="col p-0">
-                            <div id="carouselGallery" class="carousel slide" data-ride="carousel" data-interval="false">
-                                <ol class="carousel-indicators fixed-bottom p-0"></ol>
-                                <div class="carousel-inner d-flex"></div>
-                                <a class="carousel-control-prev" onclick="$('#carouselGallery').carousel('prev');" role="button">
-                                    <span class="fa fa-chevron-left fa-2x" aria-hidden="true"></span>
-                                    <span class="sr-only">Anterior</span>
+                            <div id="carouselGallery" class="carousel slide" data-bs-interval="false">
+                                <div class="carousel-indicators fixed-bottom p-0"></div>
+                                <div class="carousel-inner"></div>
+                                <a class="carousel-control-prev" data-bs-target="#carouselGallery" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Anterior</span>
                                 </a>
-                                <a class="carousel-control-next" onclick="$('#carouselGallery').carousel('next');" role="button">
-                                    <span class="fa fa-chevron-right fa-2x" aria-hidden="true"></span>
-                                    <span class="sr-only">Siguiente</span>
+                                <a class="carousel-control-next" data-bs-target="#carouselGallery" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Siguiente</span>
                                 </a>
                             </div>
                         </div>
@@ -423,7 +421,6 @@
     <!-- JS -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/all.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 
