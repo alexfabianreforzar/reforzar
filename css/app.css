@@ -164,7 +164,7 @@ button:focus {
 
 #home h1 {
     position: relative;
-    animation: caption-animated 1s 1;
+    animation: caption-animated 1s;
 }
 
 @keyframes caption-animated {
@@ -331,13 +331,13 @@ footer {
 
 #galleryModal .modal-header {
     background-color: #E9E9E9;
+    border-top: 1px solid #000;
     border-bottom: 1px solid #000;
     border-radius: 0;
 }
 
 #galleryModal .modal-content {
     background-color: #000;
-    border: 1px solid #000;
     border-radius: 0;
 }
 
