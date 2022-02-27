@@ -55,36 +55,32 @@ button:focus {
     z-index: 200;
 }
 
-.btn-llamar {
+.btn-float {
     position: fixed;
     left: 2.5rem;
-    bottom: 6rem;
     z-index: 200;
-    padding: 0.7rem;
-    background-color: #FFF;
     border: 1px solid;
     border-radius: 50%;
+    padding: 0.3rem 0.6rem 0.3rem 0.6rem;
 }
 
-.btn-llamar:hover {
-    background-color: #DDD;
+.btn-llamar {
+    bottom: 6rem;
+    background-color: #FFF;
+}
+
+.btn-llamar .bi.bi-telephone-fill {
+    font-size: 1.5rem;
 }
 
 .btn-mensaje {
-    position: fixed;
-    left: 2.5rem;
     bottom: 2.3rem;
-    z-index: 200;
-    background-color: #DDD;
-    border-radius: 50%;
+    background-color: #25D366;
+    color: #FFF;
 }
 
-.btn-mensaje img {
-    height: 2.8rem;
-}
-
-.btn-mensaje:hover img {
-    opacity: 0.5;
+.btn-mensaje .bi.bi-whatsapp {
+    font-size: 1.5rem;
 }
 
 .btn-secondary {
@@ -136,12 +132,6 @@ button:focus {
 .bi-8x {
     font-size: 8rem;
     line-height: 0.75rem;
-}
-
-.bi-custom {
-    font-size: 1.3rem;
-    line-height: 0.75rem;
-    vertical-align: -0.125rem;
 }
 
 /* Navbar */
@@ -208,6 +198,12 @@ button:focus {
 
 #about img {
     border: 3px double;
+}
+
+#about .bi.bi-check {
+    font-size: 1.3rem;
+    line-height: 0.75rem;
+    vertical-align: -0.125rem;
 }
 
 .rounded-about {
